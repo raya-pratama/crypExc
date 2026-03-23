@@ -4,7 +4,21 @@
   --background: #ffffff;
   --foreground: #171717;
 }
+@layer base {
+  .safe-area-inset-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
 
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
